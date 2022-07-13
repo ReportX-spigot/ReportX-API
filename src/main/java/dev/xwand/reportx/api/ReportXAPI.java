@@ -1,5 +1,7 @@
 package dev.xwand.reportx.api;
 
+import dev.xwand.reportx.api.api.IReportManager;
+
 /**
  * ReportX API utility class. This class contains utility methods for the
  * ReportX API.
@@ -45,5 +47,9 @@ public class ReportXAPI {
      */
     public static IReportX getPlugin() {
         return plugin;
+    }
+
+    public static IReportManager getReportManager() {
+        return plugin.getReportManager();
     }
 }
