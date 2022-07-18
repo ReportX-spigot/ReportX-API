@@ -1,6 +1,6 @@
 package dev.xwand.reportx.api;
 
-import dev.xwand.reportx.api.api.IReportManager;
+import dev.xwand.reportx.api.api.report.IReportManager;
 
 /**
  * @author xWand

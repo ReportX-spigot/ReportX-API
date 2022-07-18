@@ -1,6 +1,6 @@
 package dev.xwand.reportx.api;
 
-import dev.xwand.reportx.api.api.IReportManager;
+import dev.xwand.reportx.api.api.report.IReportManager;
 
 /**
  * ReportX API utility class. This class contains utility methods for the
