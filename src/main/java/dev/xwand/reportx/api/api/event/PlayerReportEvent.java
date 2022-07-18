@@ -4,6 +4,7 @@ import dev.xwand.reportx.api.api.report.ReportStatus;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author xWand
@@ -11,7 +12,7 @@ import org.bukkit.event.HandlerList;
 public class PlayerReportEvent extends Event implements Cancellable {
 
     private boolean isCancelled;
-    public static final HandlerList handlers = new HandlerList();
+    private static final HandlerList handlers = new HandlerList();
 
     private String id, sender, target, reason;
     private long dateTime;
@@ -60,8 +61,13 @@ public class PlayerReportEvent extends Event implements Cancellable {
         isCancelled = cancel;
     }
 
-    @Override
+    @NotNull
     public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    @NotNull
+    public static HandlerList getHandlerList() {
         return handlers;
     }
 }
